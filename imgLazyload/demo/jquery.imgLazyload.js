@@ -8,7 +8,7 @@
  * Project home:
  *   http://www.appelsiini.net/projects/lazyload
  *
- * Version:  1.2.0
+ * Version:  1.2.1
  * author : luoqinglong@gmail.com
  */
 
@@ -47,14 +47,19 @@
 			});
 		}
 		
+		
 		if(options) {
 			$.extend(settings, options);
 		}
-		//fire lazyload  
-		$(function(){update()});
 		//bind event
 		window.onscroll = update;
 		window.onresize = update;
+		
+		//fire lazyload
+		$(window).load(function() {
+	            update();
+	    });
+	    return this;
 	}
 	
 })(jQuery, window, document);
