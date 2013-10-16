@@ -1,0 +1,61 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="jquery.imgLazyload.js"></script>
+	
+  </head>
+  
+  <body>
+  <div style="float:left;border:1px red solid;width:110px;height:100px;"><img alt="" id="1" style="max-width:100px;max-height:100px;" src="non_100.png" original="01.jpg" /></div><span style="float:left;" id="1_tip"></span>
+  <div style="clear:both;"></div>
+  <div style="float:left;border:1px red solid;width:110px;height:100px;"><img alt="" id="2" style="max-width:100px;max-height:100px;" src="non_100.png"  original="02.jpg"  /></div><span style="float:left;"  id="2_tip"></span>
+  <div style="clear:both;"></div>
+  <div style="float:left;border:1px red solid;width:110px;height:100px;"><img alt="" id="3" style="max-width:100px;max-height:100px;" src="non_100.png"  original="03.jpg"  /></div><span style="float:left;"  id="3_tip"></span>
+ <div style="clear:both;"></div>
+  <div style="float:left;border:1px red solid;width:110px;height:100px;"><img alt="" id="4" style="max-width:100px;max-height:100px;" src="non_100.png"  original="04.jpg"  /></div><span style="float:left;"  id="4_tip"></span>
+    <div style="clear:both;"></div>
+  <div style="float:left;border:1px red solid;width:110px;height:100px;"><img alt="" id="5" style="max-width:100px;max-height:100px;" src="non_100.png" original="05.jpg" /></div><span style="float:left;"  id="5_tip"></span>
+   <div style="clear:both;"></div>
+ <div style="float:left;border:1px red solid;width:110px;height:100px;"><img alt="" id="6" style="max-width:100px;max-height:100px;" src="non_100.png" original="06.jpg" /></div><span style="float:left;"  id="6_tip"></span>
+ <div style="clear:both;"></div>
+  <div style="float:left;border:1px red solid;width:110px;height:100px;"><img alt="" id="7" style="max-width:100px;max-height:100px;" src="non_100.png"  original="07.jpg"  /></div><span style="float:left;"  id="7_tip"></span>
+ <div style="clear:both;"></div>
+  <div style="float:left;border:1px red solid;width:110px;height:100px;"><img alt="" id="8" style="max-width:100px;max-height:100px;" src="non_100.png"  original="08.jpg"  /></div><span style="float:left;"  id="8_tip"></span>
+ <div style="clear:both;"></div>
+ <div style="float:left;border:1px red solid;width:110px;height:100px;"><img alt="" id="9" style="max-width:100px;max-height:100px;" src="non_100.png" original="09.jpg" /></div><span style="float:left;"  id="9_tip"></span>
+   <div style="clear:both;"></div>
+ <div style="float:left;border:1px red solid;width:110px;height:100px;"><img alt="" id="10" style="max-width:100px;max-height:100px;" src="non_100.png" original="10.jpg" /></div><span style="float:left;"  id="10_tip"></span>
+ <div style="clear:both;"></div>
+  <div style="float:left;border:1px red solid;width:110px;height:100px;"><img alt="" id="11" style="max-width:100px;max-height:100px;" src="non_100.png"  original="11.jpg"  /></div><span style="float:left;"  id="11_tip"></span>
+ <div style="clear:both;"></div>
+  <div style="float:left;border:1px red solid;width:110px;height:100px;"><img alt="" id="12" style="max-width:100px;max-height:100px;" src="non_100.png"  original="12.jpg"  /></div><span style="float:left;"  id="12_tip"></span>
+ <div style="clear:both;"></div>
+    <script type="text/javascript">
+   $(document).ready(function(){
+  	 $("img[original]").lazyload({
+  	 	scrollBottom:-90,
+  	 	load:function(){
+  	 		var h = $(this).height(); 
+  	 		if(h<100&&h>20){
+  	 			var mtop = (100 - h)/2;
+  	 			$(this).css({'margin-top': mtop+'px'});
+  	 			
+  	 		}
+  	 		$("#"+$(this).attr("id")+"_tip").html("图片_id= "+$(this).attr("id")+" 加载完成！");
+  	 	}
+  	 });
+   });
+    	
+    
+	
+	</script>
+  </body>
+</html>
