@@ -6,9 +6,9 @@
  *   http://www.opensource.org/licenses/mit-license.php
  *
  * Project home:
- *   http://www.appelsiini.net/projects/lazyload
+ *   https://github.com/luoqinglong/imgLazyload
  *
- * Version:  1.2.1
+ * Version:  1.2.2
  * author : luoqinglong@gmail.com
  */
 
@@ -54,7 +54,7 @@
 		//bind event
 		window.onscroll = update;
 		window.onresize = update;
-		
+ 
 		//fire lazyload
 		$(window).load(function() {
 	            update();
